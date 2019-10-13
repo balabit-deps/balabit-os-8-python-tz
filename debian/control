@@ -1,0 +1,41 @@
+Source: python-tz
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders:  Alastair McKinstry <mckinstry@debian.org>,
+           Debian/Ubuntu Zope Team <pkg-zope-developers@lists.alioth.debian.org>,
+           Fabio Tranchitella <kobold@debian.org>
+Build-Depends: debhelper-compat (= 12), dh-python,
+               python-all (>= 2.6.6-3~),
+               python3-all,
+               python-setuptools,
+               python3-setuptools,
+               python-pytest,
+               python3-pytest,
+               tzdata (>= 2017a),
+Standards-Version: 4.4.1.0
+Homepage: http://pypi.python.org/pypi/pytz/
+Vcs-Browser: https://salsa.debian.org:/mckinstry/python-tz.git
+Vcs-Git: https://salsa.debian.org:/mckinstry/python-tz.git
+
+Package: python-tz
+Architecture: all
+Depends: tzdata, ${python:Depends}, ${misc:Depends}
+Description: Python version of the Olson timezone database
+ python-tz brings the Olson tz database into Python. This library allows
+ accurate and cross platform timezone calculations using Python 2.3 or higher.
+ It also solves the issue of ambiguous times at the end of daylight savings,
+ which you can read more about in the Python Library Reference
+ (datetime.tzinfo).
+
+Package: python3-tz
+Architecture: all
+Depends: tzdata, ${python3:Depends}, ${misc:Depends}
+Description: Python3 version of the Olson timezone database
+ python-tz brings the Olson tz database into Python. This library allows
+ accurate and cross platform timezone calculations using Python 2.3 or higher.
+ It also solves the issue of ambiguous times at the end of daylight savings,
+ which you can read more about in the Python Library Reference
+ (datetime.tzinfo).
+ .
+ This package contains the Python 3 version of the library.
